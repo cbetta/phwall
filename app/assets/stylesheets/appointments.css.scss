@@ -1,0 +1,59 @@
+@font-face {
+  font-family: 'bt_mono';
+  src: url("/fonts/bt_mono_regular.eot");
+  src: url("/fonts/bt_mono_regular.eot?#iefix") format("embedded-opentype"), url("/fonts/bt_mono_regular.woff") format("woff"), url("/fonts/bt_mono_regular.ttf") format("truetype"), url("/fonts/bt_mono_regular.svg#7ab77d0710e7e840be6567e2c3f011a4") format("svg");
+  font-style: normal;
+  font-weight: 400; }
+
+@font-face {
+  font-family: 'bt_mono_bold';
+  src: url("/fonts/bt_mono_bold.eot");
+  src: url("/fonts/bt_mono_bold.eot?#iefix") format("embedded-opentype"), url("/fonts/bt_mono_bold.woff") format("woff"), url("/fonts/bt_mono_bold.ttf") format("truetype"), url("/fonts/bt_mono_bold.svg#54e6d6596b0e9963775ade7540c652b6") format("svg");
+  font-weight: 700;
+  font-style: normal; }
+
+body {
+  margin: 0;
+  background-color: #333;
+  color: white;
+  font: 16px/1.1 "bt_mono", "Source Code Pro", courier, monospace;
+}
+
+html, body {
+  height: 100%;
+}
+
+table {
+  padding: 1% 5% 5% 5%;
+  width: 100%;
+  height: 100%;
+
+  th {
+    background-color: #333;
+    color: white;
+    font-size: 3em;
+    text-align: left;
+  }
+
+  tr {
+    color: #333;
+    background-color: white;
+    font-size: 2em;
+
+    .time {
+      color: #2EA3CB;
+      font-family: 'bt_mono_bold';
+    }
+
+    &:nth-child(2n) td:nth-child(2n+1), &:nth-child(2n+1) td:nth-child(2n) {
+      background-color: #666;
+      color: white;
+
+    }
+
+    td {
+      padding: 0 1em;
+      border-top: 10px solid #333;
+    }
+  }
+}

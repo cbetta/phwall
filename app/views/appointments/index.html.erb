@@ -1,0 +1,19 @@
+<table>
+  <tr>
+    <th colspan='2'>
+      Schedule
+    </th>
+  </tr>
+  <% @startups.each_with_index do |startup, index| %>
+    <% if index%2 == 0 %>
+      <tr>
+    <% end %>
+      <td>
+        <span class='time'><%= startup[:time] %></span>
+        <span class='name'><%= startup[:name] %></span>
+      </td>
+    <% if index%2 == 1 %>
+      </tr>
+    <% end %>
+  <% end %>
+</table>
