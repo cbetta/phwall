@@ -49,6 +49,7 @@ table {
     .time {
       color: #2EA3CB;
       font-family: 'bt_mono_bold';
+      margin-right: 1em;
     }
 
     &:nth-child(2n) td:nth-child(2n+1), &:nth-child(2n+1) td:nth-child(2n) {

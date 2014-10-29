@@ -23,17 +23,27 @@ class Doodle
   def parse
     book = Spreadsheet.open FILENAME
     sheet = book.worksheet 0
-    times = sheet.row(5)
+    @times = sheet.row(5)
     @startups = []
     sheet.each 6 do |row|
       index = row.index('OK')
       next if index.nil?
       @startups << {
         name: row[0],
-        time: times[index],
-        date: index > 35 ? DAYS[2] : (index > 18 ? DAYS[1] : DAYS[0])
+        time: time(index),
+        date: day(index)
       }
     end
+  end
+
+  def time index
+    time = @times[index]
+    time = time.squish
+    time.length == 8 ? time : "0#{time}"
+  end
+
+  def day index
+    index > 35 ? DAYS[2] : (index > 18 ? DAYS[1] : DAYS[0])
   end
 
   def current
