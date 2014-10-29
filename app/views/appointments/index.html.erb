@@ -2,6 +2,7 @@
   <tr>
     <th colspan='2'>
       Schedule
+      <small><%= Time.now.strftime("%H:%M") %></small>
     </th>
   </tr>
   <% @startups.each_with_index do |startup, index| %>
